@@ -11,6 +11,7 @@
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;800&display=swap"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="css/normalize.css" />
     <link rel="stylesheet" href="css/style.css" />
     <script
       src="https://kit.fontawesome.com/1556b0bbb1.js"
@@ -19,33 +20,49 @@
   </head>
   <body>
     <div id="page" class="site">
-      <header>
+      <header class="header">
         <div class="container">
           <div class="logo">
             <a href="/">.MIWEB</a>
           </div>
           <div class="navegacion">
-            <nav>
-              <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Service</a></li>
-                <li><a href="#">Portofolio</a></li>
-                <li><a href="#">Contact us</a></li>
+            <nav class="nav">
+              <ul class="nav__ul">
+                <li class="nav__lista">
+                  <a class="nav__enlace" href="#">Home</a>
+                </li>
+                <li class="nav__lista">
+                  <a class="nav__enlace" href="#">About</a>
+                </li>
+                <li class="nav__lista">
+                  <a class="nav__enlace" href="#">Service</a>
+                </li>
+                <li class="nav__lista">
+                  <a class="nav__enlace" href="#">Portofolio</a>
+                </li>
+                <li class="nav__lista">
+                  <a class="nav__enlace" href="#">Contact us</a>
+                </li>
               </ul>
             </nav>
-            <div class="triggers">
-              <button class="busqueda">
+            <!-- fin de nav -->
+            <div class="botones">
+              <button class="botones__busqueda">
                 <i class="fa-solid fa-magnifying-glass"></i>
               </button>
-              <button class="menu"><i class="fa-solid fa-bars"></i></button>
+              <button class="botones__menu">
+                <i class="fa-solid fa-bars"></i>
+              </button>
             </div>
           </div>
+          <!-- fin de navegacion -->
           <div class="busqueda-form">
             <input type="search" placeholder="Presionar Enter" />
             <input type="submit" hidden />
           </div>
+          <!-- fin de busqueda-form -->
         </div>
+        <!-- fin de container -->
       </header>
     </div>
     <script src="script.js" type="module"></script>

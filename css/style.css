@@ -1,4 +1,87 @@
 :root {
-  --color: #2e2d2d;
+  --color: #8e44ad;
   --colorDark: #1c1c1c;
+  --blanco: #ffffff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+/* apply a natural box layout model to all elements, but allowing components to change */
+html {
+  box-sizing: border-box;
+  font-size: 62.5%; /**para que el rem sea igual a 10px**/
+}
+a {
+  text-decoration: none;
+  vertical-align: middle;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.6rem;
+  font-weight: bold;
+  line-height: 1.8;
+  color: var(--colorDark);
+}
+
+.container {
+  position: relative;
+  max-width: 120rem;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.header {
+  line-height: 8rem;
+  background-color: var(--colorDark);
+  z-index: 10;
+  position: relative;
+  color: var(--blanco);
+  box-shadow: rgb(50 50 93 / 25%) 0 50px 100px -20px,
+    rgb(0 0 0 / 30%) 0 30px 60px -30px; /* sombra */
+}
+.container,
+.navegacion {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.logo a {
+  font-size: 2em;
+  color: var(--color);
+}
+.nav .nav__ul {
+  list-style: none;
+}
+
+@media (min-width: 992px) {
+  .nav {
+    display: block;
+    position: relative;
+    background-color: transparent;
+    padding: 0;
+  }
+  .nav .nav__ul {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+  }
+  .nav .nav__lista {
+    display: flex;
+    align-items: center;
+  }
+  .nav .nav__lista .nav__enlace {
+    color: inherit;
+    margin-right: 4rem;
+    font-size: 1.4rem;
+    font-weight: 400;
+    text-transform: uppercase;
+  }
 }
