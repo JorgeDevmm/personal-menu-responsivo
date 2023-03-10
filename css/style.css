@@ -20,7 +20,7 @@ html {
   box-sizing: border-box;
   font-size: 62.5%; /**para que el rem sea igual a 10px**/
 }
-a {
+.nav__ul a {
   text-decoration: none;
   vertical-align: middle;
 }
@@ -28,7 +28,7 @@ a {
 body {
   font-family: 'Poppins', sans-serif;
   font-size: 1.6rem;
-  font-weight: bold;
+  font-weight: 800;
   line-height: 1.8;
   color: var(--colorDark);
 }
@@ -42,12 +42,12 @@ body {
 
 .header {
   line-height: 8rem;
-  background-color: var(--colorDark);
+  background-color: var(--blanco);
   z-index: 10;
   position: relative;
-  color: var(--blanco);
+  color: var(--colorDark);
   box-shadow: rgb(50 50 93 / 25%) 0 50px 100px -20px,
-    rgb(0 0 0 / 30%) 0 30px 60px -30px; /* sombra */
+    rgb(0 0 0 / 30%) 0 30px 60px -30px;
 }
 .container,
 .navegacion {
@@ -59,16 +59,19 @@ body {
   font-size: 2em;
   color: var(--color);
 }
+
+/* 
 .nav {
   position: fixed;
   left: 0;
   top: 0;
   width: 100%;
   height: 100%;
-  background-color: var(--colorDark);
+  background-color: var(--blanco);
   z-index: 9;
   align-items: center;
-}
+}*/
+
 .nav__ul {
   list-style: none;
   display: flex;
@@ -81,7 +84,7 @@ body {
   position: relative;
   display: inline-block;
   line-height: 1.5;
-  overflow: hidden; /*ocultar*/
+  overflow: hidden; /*desbordamiento*/
 }
 
 .nav__enlace::before,
@@ -92,17 +95,17 @@ body {
   top: 0;
   width: 100%;
   height: 100%;
-  background-color: var(--amarilloClaro);
+  background-color: var(--color);
   transform: translate3d(-100%, 0, 0) translate3d(-1px, 0, 0);
   transition: transform 0.7s;
   transition-timing-function: cubic-bezier(0.7, 0, 0.3, 1);
 }
 
-.nav__enlace:after {
+.nav__enlace::after {
   height: 0.4rem;
   top: auto;
   bottom: 0;
-  background-color: var(--amarilloClaro);
+  background-color: var(--color);
 }
 
 .nav__enlace:hover::before {
@@ -128,6 +131,7 @@ body {
     display: flex;
     align-items: center;
   }
+
   .nav__enlace::after {
     height: 0.2rem;
   }
@@ -141,17 +145,12 @@ body {
 }
 
 /* Botones */
-.botones {
-}
 
-.botones__busqueda {
-}
 .botones__busqueda,
 .botones__menu {
   position: relative;
   background-color: transparent;
   border: 0;
-  color: var(--blanco);
   outline: 0;
   font-size: 1.6rem;
   cursor: pointer;
@@ -167,7 +166,7 @@ body {
   height: 100%;
   padding: 0 2rem;
   z-index: 9;
-  background-color: var(--colorDark);
+  background-color: var(--blanco);
   display: none;
 }
 
@@ -179,21 +178,19 @@ body {
   border: 0;
   outline: 0;
   font-size: 1.6rem;
-  background-color: var(--blanco);
 }
 
 .busqueda-form :is(form, input) {
   width: 100%;
 }
 
-.showbusqueda .busqueda-form {
+/* .showbusqueda .busqueda-form {
   display: flex;
 }
 
 .showbusqueda .botones__busqueda {
   z-index: 10;
-  color: var(--colorDark);
 }
 .showbusqueda .botones__busqueda i::before {
   content: '\f00d';
-}
+} */
